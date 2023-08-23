@@ -88,7 +88,9 @@ h1, h2, h3, h4 {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
-
+.li {
+  font-size: var(--normal-font-size);
+}
 ul {
   list-style: none;
 }
@@ -191,7 +193,7 @@ nav{
     
     background-color:hsla(0, 0%, 10%, .3) ;
     width: 75%;
-    height:10%;
+    height:100%;
     padding: 4.5rem 0 0 3rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -331,14 +333,19 @@ z-index: -1;
 }
 
 /*=============== ABOUT ===============*/
-.about {
+.parallax {
   background: fixed;
-  background-image:linear-gradient(to top, #281D15 50%,  #5C432D 90%);
+  background-image: url("../img/landscape.png");
+  background-size: cover;
+}
+.about {
+  background-attachment: fixed;
+  background-image:linear-gradient(to top, #281d15 60%,  #58432e86 40%, #634a331a 0% );
 }
 .about__container{
   row-gap: 2.5rem;
   padding-top: 0.1rem;
- 
+
 }
 
 .about__data {
@@ -398,7 +405,7 @@ align-items: baseline;
 
 .skills__item{
   color: var(--title-color);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-regular);
 }
 .skills__item::marker{
   color: var(--first-color);
@@ -465,16 +472,19 @@ transition: border .4s;
   row-gap: 2rem;
   justify-content: center;
   padding: 1rem;
+grid-template-columns: repeat(1, 300px);
+  
 }
 .project__card {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
   height: 300px;
+ 
 }
 .item1{
   background-attachment:local;
-  background-image: url(../img/1687457911010.jpg);
+  background-image: url(../img/item4.png);
   background-size: cover;
   
 }
@@ -494,19 +504,19 @@ transition: border .4s;
 }
 .item4{
   background-attachment:local;
-  background-image: url(../img/1687457911010.jpg);
+  background-image: url(../img/itm1.png);
   background-size: cover;
 }
 
 .item5{
   background-attachment:local;
-  background-image: url(../img/1687457911010.jpg);
+  background-image: url(../img/item.png);
   background-size: cover;
 }
 
 .item6{
   background-attachment:local;
-  background-image: url(../img/1687457911010.jpg);
+  background-image: url(../img/item6\ \(2\).png);
   background-size: cover;
 }
 .projects__modal{
@@ -517,15 +527,19 @@ transition: border .4s;
   height: 100%;
   background-attachment: fixed;
   background: var(--gradient-with-transparent);
-backdrop-filter: blur(4px);
+backdrop-filter: blur(3px);
 border-radius: 1rem;
 display: flex;  
 flex-direction: column;
 align-items: center;
 justify-content: center;
-transition: bottom .4s;
+transition: bottom .9s;
 }
-
+.ri-external-link-line{
+  color:#61dbd1;
+  text-shadow:1px 1px 2px black;
+  visibility: hidden;
+}
 .projects__subtitle, .projects__title {
 color: var(--title-color);
 font-size: var(--small-font-size);
@@ -535,12 +549,7 @@ font-size: var(--small-font-size);
   margin-bottom: .25rem;
   
 }
-.div_link{
-  width: 300px;
-  height: 300px;
- 
-  
-}
+
 
 .projects__title {
   font-size: var(--h2-font-size);
@@ -559,9 +568,16 @@ font-size: var(--small-font-size);
   align-items: center;
 
 }
-
+.project__card:hover{
+  .ri-external-link-line{
+    color:#61dbd1;
+    text-shadow:1px 1px 2px black;
+    visibility: visible;
+  }
+}
 .project__card:hover .projects__modal {
 bottom: -100%;
+
 }
 
 
@@ -735,6 +751,11 @@ bottom: 3rem;
     background: fixed;
     background-image:linear-gradient(to top, #281D15 60%,  #5C432D 40%);
   }
+  .ri-external-link-line{
+    color:#61dbd1;
+    text-shadow:1px 1px 2px black;
+  }
+  
    .footer {
     padding-block: 4.5rem 4rem;
   }
@@ -867,8 +888,10 @@ bottom: 3rem;
   padding: 3.5rem 2rem;
 }
 
+
+
 }
-@media screen and (min-width: 1152px) {
+@media screen and (min-width: 1152px) { 
   .container {
     margin-inline: auto;
   
@@ -937,7 +960,28 @@ bottom: 3rem;
 .projects__buttom {
   font-size:  var(--normal-font-size);
 }
+.div_link:hover{
+  width: 300px;
+  height: 300px;
 
+   .ri-external-link-line{
+    color:#61dbd1;
+    text-shadow:1px 1px 2px black;
+    visibility: visible;
+    transition: bottom .4s;
+    
+  }
+}
+
+.div_link{
+  width: 300px;
+  height: 300px;
+  .ri-external-link-line{
+   
+    visibility: hidden;
+    
+  }
+}
 .contact__container {
   background: fixed;
   background-image:linear-gradient(to top, #281D15 30%,  #5C432D 70%);

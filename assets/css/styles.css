@@ -252,7 +252,7 @@ z-index: -1;
 
 /*=============== HOME ===============*/
 .bg {
-  background-attachment:local;
+  background-attachment:fixed;
  background-image: url(../img/landscape.png);
  background-size:cover;
  z-index: 10000;
@@ -340,7 +340,7 @@ z-index: -1;
 }
 .about {
   background-attachment: fixed;
-  background-image:linear-gradient(to top, #281d15 60%,  #281d15 40%, #281d15 0% );
+  background-image:linear-gradient(to top, #281d151c 0%,  #281d158a 90% );
 }
 .about__container{
   row-gap: 2.5rem;
@@ -537,7 +537,9 @@ transition: border .4s;
   border: 2px solid var(--first-color);
   
 }
-
+.skills__group {
+  
+}
 
 /*=============== SERVICES ===============*/
 
@@ -549,7 +551,7 @@ transition: border .4s;
 }
 .op2 {
   background-attachment: fixed;
-  background-image:linear-gradient(to top, #281D15 70%,  #5C432D 30%);
+  background-image:linear-gradient(to top, #281d15b7 70%,  #5c432d00 30%);
 }
 .services__container {
   row-gap: 2rem;
@@ -559,12 +561,22 @@ transition: border .4s;
 
 
 .services__card {
-  text-align: center;
+  
+  
  
-padding: 3rem .25rem;
+
 border-radius: 1rem;
 border: 2px solid var(--container-color);
 transition: border .4s;
+}
+.gf{
+ 
+  text-align: center;
+}
+
+.service__description{
+ text-align: left;
+ padding: .2rem 2rem;
 }
 
 .services__card:hover {
@@ -572,6 +584,7 @@ transition: border .4s;
   border: 2px solid var(--container-color);
 
 }
+
 
 .services__icon {
   display: block;
@@ -755,10 +768,7 @@ position: relative;
 
 }
 /*=============== FOOTER ===============*/
-.footer{
 
- 
-}
 
 .footer__container{
   background-color: #2e2318a1;
@@ -1017,10 +1027,6 @@ bottom: 3rem;
   grid-template-columns: repeat(2, 352px);
   padding: 2.5rem 4rem;
 }
-.services__card{
-  padding: 3.5rem 2rem;
-}
-
 
 
 }
@@ -1076,10 +1082,10 @@ bottom: 3rem;
   row-gap: 1.5rem;
 }
 .skills__item {
-  font-size: var(--h3-font-size);
+  font-size: var(--font-regular);
 }
 .services__container {
-  grid-template-columns: repeat(2, 352px);
+  grid-template-columns: repeat(2, 500px);
   padding: 2.5rem 4rem;
 }
 .services__card{
